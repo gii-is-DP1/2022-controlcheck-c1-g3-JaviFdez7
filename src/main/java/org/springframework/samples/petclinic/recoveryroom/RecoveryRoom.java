@@ -44,10 +44,7 @@ public class RecoveryRoom {
     @NotNull
     boolean secure;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "recoveryRoom", fetch = FetchType.EAGER)
-	private Set<Visit> visits;
 
-    @ManyToOne
-    @JoinColumn(name = "t2_id")
+    @Transient
     RecoveryRoomType roomType;
 }
